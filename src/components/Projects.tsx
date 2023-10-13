@@ -2,6 +2,7 @@
 import { Tilt } from "react-tilt"
 import { motion } from 'framer-motion'
 import { github } from "../../public/assets"
+import { livesite } from "../../public/assets"
 import { SectionWrapper } from "@/hoc"
 import { projects } from "@/constants"
 import { fadeIn, textVariant } from "@/utils/motion"
@@ -15,8 +16,9 @@ type ProjectCardProps = {
   description: string;
   tags: { name: string; color: string; }[]
   source_code_link: string
+  live_demo_link: string
 }
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }: ProjectCardProps) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_demo_link }: ProjectCardProps) => {
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       <Tilt
@@ -35,15 +37,15 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             className="object-fill w-full h-full rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end m-3 mr-1 card-img_hover">
             <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-              <Link href={source_code_link} target="_blank">
+              <Link href={live_demo_link} target="_blank">
                 <Image
-                  src={github}
+                  src={livesite}
                   width={22}
                   height={22}
-                  alt='github'
-                  className="object-contai"
+                  alt='live'
+                  className="object-contain"
                 />
               </Link>
             </div>
@@ -54,7 +56,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                   width={22}
                   height={22}
                   alt='github'
-                  className="object-contai"
+                  className="object-contain"
                 />
               </Link>
             </div>
