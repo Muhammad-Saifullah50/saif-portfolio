@@ -12,7 +12,7 @@ export default function Home() {
       <Tech />
       <Education/>
       <Projects />
-      <Feedbacks />
+      {/* <Feedbacks /> */}
       <section className='relative z-0'>
         <Contact />
         <StarsCanvas />
