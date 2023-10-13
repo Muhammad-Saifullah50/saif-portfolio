@@ -13,15 +13,9 @@ import {
   mongodb,
   git,
   figma,
-  docker,
   meta,
-  starbucks,
-  tesla,
-  shopify,
-  threejs,
   nextjs,
   prisma,
-  github,
   kubernetes,
   flexibble,
   carhub,
@@ -113,24 +107,12 @@ const technologies = [
     icon: prisma,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "Git",
     icon: git,
   },
   {
-    name: "Github",
-    icon: github,
-  },
-  {
     name: "Figma",
     icon: figma,
-  },
-  {
-    name: "Docker",
-    icon: docker,
   },
   {
     name: "Kubernetes",
