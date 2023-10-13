@@ -67,7 +67,7 @@ const services = [
 
 const technologies = [
   {
-    name: "Next.js",
+    name: "Next JS",
     icon: nextjs,
   },
   {
