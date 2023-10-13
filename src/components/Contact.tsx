@@ -21,44 +21,39 @@ const Contact = () => {
     setform({ ...form, [name]: value })
   }
   const handleSumbit = async (e: any) => {
-
+    e.preventDefault()
+    setLoading(true)
     try {
-      e.preventDefault()
-      setLoading(true)
-
-      emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_KEY!,
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_KEY!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY!,
         {
           from_name: form.name,
-          to_name: "Muhammad Saifullah",
+          to_name: 'Muhammad Saifullah',
           from_email: form.email,
-          to_email: "saifullahm2005@gmail.com",
+          to_email: 'saifullahm2005@gmail.com',
           message: form.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!)
-        .then((response) => {
-          alert('Thanks for your message, I will reach you soon')
-        }, (err) => {
-          console.log('FAILED...', err);
-        });
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      alert('Thanks for your message, I will reach you soon');
       setform({
         name: '',
         email: '',
-        message: ''
-      })
+        message: '',
+      });
     } catch (error) {
-      console.log(error)
-      setLoading(false)
-      alert('Oops! something went wrong')
-      setform({
-        name: form.name,
-        email: form.email,
-        message: form.message
-      })
-
+      alert('Oops! something went wrong');
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
+
+
+
+
+
+
   }
   return (
     <div
@@ -109,7 +104,7 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary  rounded-xl'
+            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary  rounded-xl hover:bg-black-200'
           >
             {loading ? 'Sending...' : 'Send'}
           </button>
