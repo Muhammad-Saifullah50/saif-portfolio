@@ -1,4 +1,4 @@
-import { About, Contact, Education, Experience, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Works } from "@/components";
+import { About, Contact, Education, Experience, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Projects } from "@/components";
 
 export default function Home() {
   return (<>
@@ -11,7 +11,7 @@ export default function Home() {
       <Experience />
       <Tech />
       <Education/>
-      <Works />
+      <Projects />
       <Feedbacks />
       <section className='relative z-0'>
         <Contact />

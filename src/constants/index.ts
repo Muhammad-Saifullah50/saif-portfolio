@@ -140,7 +140,7 @@ const education = [
   {
     title: "Cloud Native Computing",
     from: "PIAIC",
-    icon: meta,
+    icon: backend,
     iconBg: "#E6DEDD",
     date: "Jun 2022 - Present",
     points: [
@@ -148,6 +148,26 @@ const education = [
       "Learnt Backend Development using TypeScript, Next.js 13, Prisma ORM, MongoDB and more technologies  .",
       "Learnt Linux System Administration, containerization with Docker and container orchestration with Kubernetes.",
       "Completed all assignment and projects.",
+    ],
+  },
+  {
+    title: "Intermediate - Science Pre-Engineering Group",
+    from: "Government National College",
+    icon: creator,
+    iconBg: "#E6DEDD",
+    date: "Aug 2022 - Present",
+    points: [
+     'Currently studying in Intermediate Second Year'
+    ],
+  },
+  {
+    title: "Matric - Science Group",
+    from: "Al Badar Higher Secondary School",
+    icon: mobile,
+    iconBg: "#E6DEDD",
+    date: "Mar 2017 - Jun 2022",
+    points: [
+     'Passed Matric with A1 Grade in Science Group'
     ],
   },
 ]

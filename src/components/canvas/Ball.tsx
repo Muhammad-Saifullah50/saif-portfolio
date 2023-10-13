@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
 import CanvasLoader from '../Loader'
 
-type BallCanvasProps = { icon: {} }
+type BallCanvasProps = { icon: {}}
 
 const Ball = (props: any) => {
   const [decal] = useTexture([props.imgUrl.src])
@@ -48,12 +48,12 @@ const BallCanvas = ({ icon }: BallCanvasProps) => {
         <OrbitControls
           enableZoom={false}
         />
-        <Ball imgUrl={icon} />
+        <Ball imgUrl={icon}/>
       </Suspense>
 
       <Preload all />
     </Canvas>
-  )
+     )
 }
 
 export default BallCanvas

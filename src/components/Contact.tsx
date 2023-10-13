@@ -1,13 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useState, useRef, ChangeEvent } from 'react'
-import emailjs from '@emailjs/browser'
 import { EarthCanvas } from '.'
 import { SectionWrapper } from '@/hoc'
 import { slideIn } from '@/utils/motion'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-
   const [form, setform] = useState({
     name: '',
     email: '',
@@ -21,38 +20,45 @@ const Contact = () => {
 
     setform({ ...form, [name]: value })
   }
-  const handleSumbit = (e: any) => {
-    e.preventDefault()
-    setLoading(true)
+  const handleSumbit = async (e: any) => {
 
-    emailjs.send(
-      process.env.EMAILJS_SERVICE_KEY!,
-      process.env.EMAILJS_TEMPLATE_KEY!,
-      {
-        from_name: form.name,
-        to_name: 'Muhammad Saifullah',
-        from_email: form.email,
-        to_email: 'saifullahm2005@gmail.com',
-        message: form.message,
-      },
-      process.env.EMAILJS_PUBLIC_KEY!
-    )
-      .then(() => {
-        setLoading(false)
-        
-        setform({
-          name: '',
-          email: '',
-          message: ''
-        })
-      },
-        (error) => {
-          console.log(error)
-          setLoading(false)
+    try {
+      e.preventDefault()
+      setLoading(true)
 
-          
+      emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_KEY!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY!,
+        {
+          from_name: form.name,
+          to_name: "Muhammad Saifullah",
+          from_email: form.email,
+          to_email: "saifullahm2005@gmail.com",
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!)
+        .then((response) => {
+          alert('Thanks for your message, I will reach you soon')
+        }, (err) => {
+          console.log('FAILED...', err);
+        });
+      setform({
+        name: '',
+        email: '',
+        message: ''
+      })
+    } catch (error) {
+      console.log(error)
+      setLoading(false)
+      alert('Oops! something went wrong')
+      setform({
+        name: form.name,
+        email: form.email,
+        message: form.message
+      })
 
-        })
+    } finally {
+      setLoading(false)
+    }
   }
   return (
     <div
@@ -66,7 +72,7 @@ const Contact = () => {
         <h3 className='sectionHeadText'>Contact.</h3>
 
         <form
-        //@ts-ignore
+          //@ts-ignore
           ref={formRef}
           onSubmit={handleSumbit}
           className='flex flex-col gap-8 mt-12'>

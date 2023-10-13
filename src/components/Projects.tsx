@@ -79,7 +79,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     </motion.div>
   )
 }
-const Works = () => {
+const Projects = () => {
   return (
     <>
       <motion.div
@@ -117,4 +117,4 @@ const Works = () => {
   )
 }
 
-export default SectionWrapper(Works, 'projects')
+export default SectionWrapper(Projects, 'projects')
