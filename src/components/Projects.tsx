@@ -37,7 +37,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             className="object-fill w-full h-full rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 mr-1 card-img_hover">
+          <div className="absolute inset-0 flex justify-end m-3 gap-1 card-img_hover">
             <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
               <Link href={live_demo_link} target="_blank">
                 <Image
@@ -45,7 +45,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
                   width={22}
                   height={22}
                   alt='live'
-                  className="object-contain"
+                  className="object-contain invert"
                 />
               </Link>
             </div>
