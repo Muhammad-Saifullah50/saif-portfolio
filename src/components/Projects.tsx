@@ -42,8 +42,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
               <Link href={live_demo_link} target="_blank">
                 <Image
                   src={livesite}
-                  width={22}
-                  height={22}
+                  width={18}
+                  height={18}
                   alt='live'
                   className="object-contain invert"
                 />
