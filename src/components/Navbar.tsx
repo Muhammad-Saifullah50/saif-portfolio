@@ -51,6 +51,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        {/* mobile naigation */}
         <div className="sm:hidden flex flex-1  justify-end items-center">
           <Image
             src={toggle ? close : menu}
@@ -74,7 +75,7 @@ const Navbar = () => {
                     setToggle(prev => !prev)
                   }}
                 >
-                  <a href={`#${link.id}`} />{link.title}</li>
+                  <Link href='#contact' />{link.title}</li>
               ))}
             </ul>
           </div>
