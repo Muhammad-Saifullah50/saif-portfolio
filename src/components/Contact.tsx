@@ -49,11 +49,6 @@ const Contact = () => {
       setLoading(false);
     }
 
-
-
-
-
-
   }
   return (
     <div
