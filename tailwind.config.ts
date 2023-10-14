@@ -16,7 +16,7 @@ const config: Config = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/assets/herobg.png')",
+        "hero-pattern": "url('/assets/herobg.webp')",
       },
       colors: {
         primary: "#050816",
