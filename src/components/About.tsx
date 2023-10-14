@@ -42,10 +42,11 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
 }
 const About = () => {
   return (
-    <><motion.div variants={textVariant()}>
-      <p className="sectionSubText">INTRODUCTION</p>
-      <h2 className="sectionHeadText">Overview.</h2>
-    </motion.div>
+    <>
+      <motion.div variants={textVariant()}>
+        <p className="sectionSubText">INTRODUCTION</p>
+        <h2 className="sectionHeadText">Overview.</h2>
+      </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}

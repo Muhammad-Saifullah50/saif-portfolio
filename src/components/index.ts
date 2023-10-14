@@ -8,7 +8,7 @@ import Projects from './Projects';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Education from './Education';
-
+import ScrollBtn from './ScrollBtn';
 export {
   Hero,
   Navbar,
@@ -19,6 +19,7 @@ export {
   Projects,
   Feedbacks,
   Contact,
+  ScrollBtn,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
