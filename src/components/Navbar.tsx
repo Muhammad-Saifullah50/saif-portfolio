@@ -75,7 +75,7 @@ const Navbar = () => {
                     setToggle(prev => !prev)
                   }}
                 >
-                  <Link href='#contact' />{link.title}</li>
+                  <a href={`#${link.id}`}>{link.title}</a></li>
               ))}
             </ul>
           </div>
