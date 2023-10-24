@@ -10,7 +10,7 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className='heroHeadText text-white'>Hi, I&apos;m <span className='text-[#915eff]'>Saifullah</span></h1>
+          <h1 className='heroHeadText text-white'>Hi, I&apos;m <span className='text-[#915eff]'>Saif</span></h1>
           <p className='heroSubText mt-2 text-white-100'>I develop modern and <br className='sm:hidden block' /> professional web applications</p>
         </div>
       </div>
