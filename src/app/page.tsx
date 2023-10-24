@@ -1,4 +1,5 @@
 import { About, Contact, Education, Experience, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Projects } from "@/components";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (<>
@@ -10,13 +11,14 @@ export default function Home() {
       <About />
       <Experience />
       <Tech />
-      <Education/>
+      <Education />
       <Projects />
       {/* <Feedbacks /> */}
       <section className='relative z-0'>
         <Contact />
         <StarsCanvas />
       </section>
+      <Footer />
     </section>
   </>)
 }

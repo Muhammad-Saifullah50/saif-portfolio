@@ -20,7 +20,9 @@ import {
   flexibble,
   carhub,
   photoose,
-  promptopia
+  promptopia,
+  linkedIn,
+  github
 
 } from "../../public/assets";
 
@@ -312,4 +314,17 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, education };
+const socialLinks = [
+  {
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/muhammad-saifullah-a5975a255/',
+    img: linkedIn 
+  },
+  {
+    title: 'Github',
+    url: 'https://github.com/Muhammad-Saifullah50',
+    img: github 
+  }
+]
+
+export { services, technologies, experiences, testimonials, projects, education, socialLinks };

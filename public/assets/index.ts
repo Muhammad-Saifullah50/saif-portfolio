@@ -1,12 +1,13 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import backend from "./backend.webp";
+import creator from "./creator.webp";
+import mobile from "./mobile.webp";
+import web from "./web.webp";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import livesite from './livesite.svg'
+import linkedIn from './linkedIn.svg'
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -67,5 +68,6 @@ export {
   flexibble,
   promptopia,
   carhub,
-  photoose
+  photoose,
+  linkedIn
 };

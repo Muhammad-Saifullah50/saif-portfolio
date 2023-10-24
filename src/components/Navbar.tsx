@@ -25,7 +25,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className={`paddingX sm:px-16 px-6 w-full flex fixed top-0 items-center py-5 z-20 ${scrolled ? 'bg-primary' : 'bg-transparent'}`}>
+    <nav className={`paddingX  w-full flex fixed top-0 items-center py-5 z-20 ${scrolled ? 'bg-primary' : 'bg-transparent'}`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           href='/'
@@ -69,7 +69,7 @@ const Navbar = () => {
               {navLinks.map((link: { id: string, title: string }) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer text-[16opx]`}
+                  className={`${active === link.title ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setActive(link.title)
                     setToggle(prev => !prev)
