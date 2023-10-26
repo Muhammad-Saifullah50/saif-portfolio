@@ -1,10 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useState, useRef, ChangeEvent } from 'react'
-import { EarthCanvas } from '.'
+import { EarthCanvas, ScrollBtn } from '.'
 import { SectionWrapper } from '@/hoc'
 import { slideIn } from '@/utils/motion'
 import emailjs from '@emailjs/browser'
+import Link from 'next/link'
 
 const Contact = () => {
   const [form, setform] = useState({
@@ -55,11 +56,14 @@ const Contact = () => {
       className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'
     >
       <motion.div
+              id='contact'
+
         variants={slideIn('left', 'between', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className='sectionSubText'>Get in touch</p>
-        <h3 className='sectionHeadText'>Contact.</h3>
+        <h3 
+          className='sectionHeadText'>Contact.</h3>
 
         <form
           //@ts-ignore
@@ -114,7 +118,16 @@ const Contact = () => {
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         <EarthCanvas />
+        <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center' >
+          <Link
+            href='#contact'>
+            <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
 
+              <ScrollBtn />
+            </div>
+          </Link>
+
+        </div>
       </motion.div>
     </div>
   )
