@@ -15,7 +15,7 @@
     "@types/three": "^0.156.0",
     "framer-motion": "^10.16.4",
     "maath": "^0.10.4",
-    "next": "13.5.4",
+    "next": "^14.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-tilt": "^1.0.2",
