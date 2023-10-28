@@ -34,6 +34,7 @@ import flexibble from "./flexibble.png";
 import carhub from "./carhub.png";
 import promptopia from "./promptopia.png";
 import photoose from "./photoose.png";
+import ripples from "./ripples.png";
 
 
 export {
@@ -69,5 +70,7 @@ export {
   promptopia,
   carhub,
   photoose,
-  linkedIn
+  linkedIn,
+  ripples
+
 };

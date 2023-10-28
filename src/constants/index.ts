@@ -19,6 +19,7 @@ import {
   kubernetes,
   flexibble,
   carhub,
+  ripples,
   photoose,
   promptopia,
   linkedIn,
@@ -173,6 +174,7 @@ const education = [
     ],
   },
 ]
+
 const testimonials = [
   {
     testimonial:
@@ -197,11 +199,43 @@ const testimonials = [
   },
 ];
 
+
+
 const projects = [
   {
-    name: "Dribble Clone",
+    name: "Ripples",
     description:
-      "A Full Stack Dribble clone made for developers that allows them to share creative designs and projects with the community. I have also implemented full CRUD functionalities so that users can update and delete thier projects.",
+      "A modern Full Stack social media application where users can create posts, view other peoples posts, add comments to posts, create communities, add people to communities and much more .... made with Next.js 13, React 18, MongoDB and TypeScript",
+    tags: [
+      {
+        name: "nextjs13",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongoose",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react18",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: ripples,
+    source_code_link: "https://github.com/Muhammad-Saifullah50/ripples",
+    live_demo_link: "https://ripples-kappa.vercel.app/",
+  },
+  {
+    name: "Flexibble",
+    description:
+      "A Full Stack application made for developers that allows them to share creative designs and projects with the community. I have also implemented full CRUD functionalities so that users can update and delete thier projects.",
     tags: [
       {
         name: "nextjs13",

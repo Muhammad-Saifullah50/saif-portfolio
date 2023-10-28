@@ -10,7 +10,7 @@ export default function Home() {
       </section>
       <About />
       <Experience />
-      {/* <Tech /> */}
+      <Tech />
       <Education />
       <Projects />
       {/* <Feedbacks /> */}
