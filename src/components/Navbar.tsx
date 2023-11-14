@@ -40,7 +40,7 @@ const Navbar = () => {
           />
           <p className="text-white font-bold text-[18px] cursor-pointer flex ">Muhammad Saifullah</p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden md:flex flex-row gap-10">
           {navLinks.map((link: { id: string, title: string }) => (
             <li
               key={link.id}
@@ -52,7 +52,7 @@ const Navbar = () => {
           ))}
         </ul>
         {/* mobile naigation */}
-        <div className="sm:hidden flex flex-1  justify-end items-center">
+        <div className="md:hidden flex flex-1  justify-end items-center">
           <Image
             src={toggle ? close : menu}
             alt="menu"
