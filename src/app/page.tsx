@@ -8,16 +8,16 @@ export default function Home() {
         <Navbar />
         <Hero />
       </section>
-      <About />
+      {/* <About />
       <Experience />
       <Tech />
       <Education />
-      <Projects />
+      <Projects /> */}
       {/* <Feedbacks /> */}
-      <section className='relative z-0'>
+      {/* <section className='relative z-0'>
         <Contact />
         <StarsCanvas />
-      </section>
+      </section> */}
       <Footer />
     </section>
   </>)
