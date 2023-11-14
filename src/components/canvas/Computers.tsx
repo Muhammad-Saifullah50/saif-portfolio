@@ -5,13 +5,14 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js"
 import CanvasLoader from "../Loader"
 import { Mesh } from "three"
+import Image from "next/image"
 type ComputerProps = {
   isMobile: boolean
 }
 
 const Computers = ({ isMobile }: ComputerProps) => {
   const ref = useRef<Mesh>(null!)
-  const computer = useLoader(GLTFLoader,'/desktop_pc/scene.gltf')
+  const computer = useLoader(GLTFLoader, '/desktop_pc/scene.gltf')
   return (<>
     <mesh ref={ref}>
       <hemisphereLight
@@ -58,8 +59,9 @@ const ComputersCanvas = () => {
   }, [])
 
   return (<>
+   
+
     <Canvas
-      className="hidden lg:block"
       frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
