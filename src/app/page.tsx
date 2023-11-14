@@ -6,7 +6,7 @@ export default function Home() {
     <section className="relative bg-primary z-0">
       <section className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
         <Navbar />
-        {/* <Hero /> */}
+        <Hero />
       </section>
       <About />
       <Experience />
