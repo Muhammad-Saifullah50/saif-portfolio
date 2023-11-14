@@ -1,7 +1,8 @@
 'use client'
 import { useState, useEffect, Suspense, useRef } from "react"
-import { Canvas } from "@react-three/fiber"
+import { Canvas, useLoader } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js"
 import CanvasLoader from "../Loader"
 import { Mesh } from "three"
 type ComputerProps = {
@@ -10,7 +11,7 @@ type ComputerProps = {
 
 const Computers = ({ isMobile }: ComputerProps) => {
   const ref = useRef<Mesh>(null!)
-  const computer = useGLTF('/desktop_pc/scene.gltf')
+  const computer = useLoader(GLTFLoader,'/desktop_pc/scene.gltf')
   return (<>
     <mesh ref={ref}>
       <hemisphereLight

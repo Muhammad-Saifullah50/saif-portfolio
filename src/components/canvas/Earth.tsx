@@ -1,12 +1,12 @@
 'use client'
 import { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useLoader } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import CanvasLoader from '../Loader'
-import { motion } from 'framer-motion'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 const Earth = () => {
-  const earth = useGLTF('/planet/scene.gltf')
+  const earth = useLoader(GLTFLoader,'/planet/scene.gltf')
   return (
     <primitive
       object={earth.scene}
